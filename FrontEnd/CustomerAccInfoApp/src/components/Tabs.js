@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from "react";
-import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import UserProfile from "../components/UserProfile";
 import AccountInfo from "../components/AccountInfo";
-import Typography from "@material-ui/core/Typography";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -20,13 +18,13 @@ export default function CustomerAccInfoTabs(props) {
   const [value, setValue] = useState(0);
   const [accounts, setAccounts] = useState(null);
 
-    const { customerId, customerInfo, transactionDetails } = props;
+    const { customerInfo, transactionDetails } = props;
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
   const query = `query {
-    getAccounts(customerId: ${customerId}) {
+    getAccounts(customerId: ${customerInfo.customerId}) {
       customerId
       accountNumber
       accountType
@@ -60,7 +58,7 @@ export default function CustomerAccInfoTabs(props) {
           <Tab label="Account Information" id="accountinfotab" />
         </Tabs>
       </AppBar>
-      {value === 0 ? <UserProfile customerInfo={customerInfo} /> : <AccountInfo accounts={accounts} transactionDetails={transactionDetails} />}
+     {value === 0 ? <UserProfile customerInfo={customerInfo} /> : <AccountInfo accounts={accounts} transactionDetails={transactionDetails} />}
     </div>
   );
 }

@@ -2,15 +2,14 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
 
-const mount = (el, {customerId, customerInfo, transactionDetails}) =>{
-    ReactDOM.render( <App customerId={customerId} customerInfo={customerInfo} transactionDetails={transactionDetails}/>, el )
+const mount = (el, {customerInfo, transactionDetails}) =>{
+    ReactDOM.render( <App customerInfo={customerInfo} transactionDetails={transactionDetails}/>, el )
 }
 
 if(process.env.NODE_ENV === 'development'){
     const devRoot = document.querySelector('#_customeraccinfo-dev-root')
     if(devRoot)
         mount(devRoot, {
-            customerId: 1000000,
             customerInfo: {
                 customerId: 1000000,
                 username: 'John',

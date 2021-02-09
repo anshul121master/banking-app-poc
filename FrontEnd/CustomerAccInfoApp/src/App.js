@@ -7,10 +7,10 @@ const generateClassName = createGenerateClassName({
 })
 
 export default function App(props){
-    const { customerId, customerInfo, transactionDetails } = props;
+    const { customerInfo, transactionDetails } = props;
     return (
         <StylesProvider generateClassName={generateClassName}>
-        <Tabs customerId={customerId} customerInfo={customerInfo} transactionDetails={transactionDetails} />
+        <Tabs customerInfo={customerInfo} transactionDetails={transactionDetails} />
         </StylesProvider>
     )
 }

@@ -59,16 +59,16 @@ const accounts = [{
 const customerData = [
     {
         customerId: 1000000,
-        username: 'CustomerOne',
+        username: 'Anshul',
         password: 'abcd',
-        email: 'CustomerOne@gmail.com',
+        email: 'anshula128@gmail.com',
         phoneNumber: '9876543212'
     },
     {
         customerId: 1000001,
-        username: 'CustomerTwo',
+        username: 'John',
         password: 'xyz',
-        email: 'CustomerTwo@gmail.com',
+        email: 'john@gmail.com',
         phoneNumber: '9787644674'
     }
 ]

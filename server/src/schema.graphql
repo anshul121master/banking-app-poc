@@ -1,5 +1,5 @@
 type Query {
-  getCustomerInfo(username: String!, password: String!): Customer
+  getCustomerInfo(email: String!, password: String!): Customer
   getAccounts(customerId: ID!): [Account]
   getTransactions(accountNumber: String!): [Transaction]
 }
