@@ -18,9 +18,9 @@ const devConfig = {
         new ModuleFederationPlugin({
             name: 'container',
             remotes: {
+                login: 'login@http://localhost:8083/remoteEntry.js',
                 transaction: 'transaction@http://localhost:8081/remoteEntry.js',
-                customerAccInfo: 'customerAccInfo@http://localhost:8082/remoteEntry.js',
-                login: 'login@http://localhost:8083/remoteEntry.js'
+                 customerAccInfo: 'customerAccInfo@http://localhost:8082/remoteEntry.js'
             },
             shared: packageJSON.dependencies
         }),

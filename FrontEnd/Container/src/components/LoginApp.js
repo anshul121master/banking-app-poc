@@ -5,9 +5,10 @@ export default function LoginApp({ onLoginSuccess }) {
     console.log("login called")
     const ref = useRef(null);
     useEffect(() => {
+        console.log(mount)
         mount(ref.current, onLoginSuccess)
     },[])
     return (
-        <div ref={ref}></div>
+        <div id="login" ref={ref}></div>
     )
 }

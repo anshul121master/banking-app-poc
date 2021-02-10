@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom'
 import App from './App'
 
 const mount = (el, {customerInfo, transactionDetails}) =>{
+    debugger
+    console.log("customerinfo", el)
     ReactDOM.render( <App customerInfo={customerInfo} transactionDetails={transactionDetails}/>, el )
 }
 

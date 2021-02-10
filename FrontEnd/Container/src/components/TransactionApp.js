@@ -9,6 +9,6 @@ export default function TransactionApp({accountNumber}) {
         })
     },[])
     return (
-        <div ref={ref}></div>
+        <div id="transaction" ref={ref}></div>
     )
 }

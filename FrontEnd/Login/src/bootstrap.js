@@ -17,6 +17,7 @@ import Login from './components/Login';
 // };
 
 const mount = (el, onLoginSuccess) =>{
+  console.log(el)
   ReactDOM.render(<Login onLoginSuccess={onLoginSuccess} />, el)
 }
 // If we are in development and in isolation,
